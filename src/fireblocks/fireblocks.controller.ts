@@ -6,7 +6,7 @@ export class FireblocksController {
   constructor(private readonly fireblocksService: FireblocksService) {}
 
   @Get()
-  getFireblocksInfo(): string {
-    return this.fireblocksService.getFireblocksInfo();
+  async getFireblocksInfo(): Promise<string> {
+    return await this.fireblocksService.getFireblocksInfo();
   }
 }
