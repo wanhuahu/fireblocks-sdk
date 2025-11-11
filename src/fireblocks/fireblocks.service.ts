@@ -25,7 +25,11 @@ export class FireblocksService {
       vaultAccountId: 'wanhua',
       assetId: 'ETH_TEST5',
     });*/
-    const vaultResponse = await fireblocks.blockchainsAssets.listAssets();
+    const vaultResponse =
+      await fireblocks.vaults.getVaultAccountAssetAddressesPaginated({
+        vaultAccountId: '0',
+        assetId: 'ETH_TEST5',
+      });
     return JSON.stringify(vaultResponse, null, 2);
   }
 }
