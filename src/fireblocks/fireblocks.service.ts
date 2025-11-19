@@ -7,7 +7,7 @@ export class FireblocksService {
     const fireblocks = new Fireblocks({
       apiKey: '',
       secretKey: ``,
-      basePath: 'https://sandbox-api.fireblocks.io/v1',
+      basePath: 'https://api.fireblocks.io/v1',
     });
 
     // Get all assets and addresses for the vault account in one call
