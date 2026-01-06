@@ -12,10 +12,11 @@ export class FireblocksService {
 
     // Get all assets and addresses for the vault account in one call
     /*
+    const vaultResponse = await fireblocks.blockchainsAssets.listBlockchains();
     const vaultResponse = await fireblocks.blockchainsAssets.listAssets();
     const vaultResponse = await fireblocks.blockchainsAssets.getSupportedAssets();
     const vaultResponse = await fireblocks.vaults.getVaultAccount({
-      vaultAccountId: '1',
+      vaultAccountId: '3',
     });
     const vaultResponse = await fireblocks.vaults.getVaultAssets({
       accountNamePrefix: 'wanhua',
@@ -25,11 +26,9 @@ export class FireblocksService {
       vaultAccountId: 'wanhua',
       assetId: 'ETH_TEST5',
     });*/
-    const vaultResponse =
-      await fireblocks.vaults.getVaultAccountAssetAddressesPaginated({
-        vaultAccountId: '0',
-        assetId: 'ETH_TEST5',
-      });
+    const vaultResponse = await fireblocks.vaults.getVaultAccount({
+      vaultAccountId: '3',
+    });
     return JSON.stringify(vaultResponse, null, 2);
   }
 }
